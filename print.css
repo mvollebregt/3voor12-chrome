@@ -20,10 +20,11 @@ div#container-outside {
 #main img {
   visibility: hidden;
 }
+#main .mgnlEditor, #main .mgnlEditor *,
+#main .share, #main .share *,
+#main .intro img,
 #main .vtk-image-gallery, #main .vtk-image-gallery *, 
 #main #disqus_thread, #main #disqus_thread *,
-#main .share, #main .share *,
-#main .mgnlEditor, #main .mgnlEditor *,
 #main .content, #main .content *
 {
   height: 0 ; visibility: hidden;
