@@ -9,5 +9,6 @@
         "js": ["jquery-2.1.4.min.js", "3v12.js"]
       }
     ],
-  "web_accessible_resources": ["print.css"]
+  "permissions": ["http://*/"],
+  "web_accessible_resources": ["print.css", "extras.css"]
 }
