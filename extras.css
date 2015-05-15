@@ -2,3 +2,8 @@
   background-color: yellow;
   -webkit-print-color-adjust: exact;
 }
+.extra {
+  color: gray;
+  font-style: italic;
+  font-size: 75%;
+}

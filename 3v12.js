@@ -48,9 +48,29 @@ function checkLinkHrefs() {
   });
 }
 
+function word(word) {
+  return word.replace(/\W/g, '');
+}
+
+function countWords() {
+  $(".abstract, div.text p").each(function(index, elt) {
+    var clone = $(elt).clone();
+    clone.find("br").replaceWith("\n");
+    var summary = "";
+    $.each(clone.text().split("\n"), function(index, part) {
+      var words = part.split(/\s+/).filter(function(w){return w!=''});;
+      if (words.length > 4) {
+        summary += word(words[0]) + " " + word(words[1]) + "..." + word(words[words.length - 1 ]) + " (" + words.length + " woorden); "
+      }
+    });
+    $(elt).append("<br/><span class='extra'>" + summary.substring(0, summary.length - 2) + "</span>");
+  });
+}
+
 applyAllCssToPrint();
 addCss('print.css', 'print');
 addCss('extras.css', 'screen, projection, print');
 checkDate();
 checkLinkTargets();
 checkLinkHrefs();
+countWords();
