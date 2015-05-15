@@ -1,0 +1,30 @@
+body * {
+  visibility: hidden;
+}
+#main, #main * {
+  visibility: visible;
+}
+#main {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 672px;
+}
+div#container-outside {
+  margin: 0;
+  width: 672px;
+}
+.vtk-text-image {
+  page-break-inside: avoid;
+}
+#main img {
+  visibility: hidden;
+}
+#main .vtk-image-gallery, #main .vtk-image-gallery *, 
+#main #disqus_thread, #main #disqus_thread *,
+#main .share, #main .share *,
+#main .mgnlEditor, #main .mgnlEditor *,
+#main .content, #main .content *
+{
+  height: 0 ; visibility: hidden;
+}
