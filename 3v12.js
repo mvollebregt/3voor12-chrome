@@ -23,11 +23,10 @@ function checkDate() {
 }
 
 function checkLinkTargets() {
-  $("#main a[target!='_blank']").addClass("error");
+  $("#main a[target!='_blank']").not("[href^='mailto:']").addClass("error");
 }
 
 function tryUrl(url, fail) {
-  console.log(url);
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function (oEvent) {  
     if (xhr.readyState == 4) {  
@@ -42,7 +41,7 @@ function tryUrl(url, fail) {
 }
 
 function checkLinkHrefs() {
-  $("#main a[rel!='showbox']").each(function (index, elt) {
+  $("#main a[rel!='showbox']").not("[href^='mailto:']").each(function (index, elt) {
     var url = $(elt).attr('href');
     // Op facebooklinks werkt de check niet goed. TODO: uitzoeken waarom niet en dan fixen
     if (url.indexOf("facebook.com") == -1) {
