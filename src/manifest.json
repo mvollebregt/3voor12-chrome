@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "3v12 redactie",
   "description": "Hulpmiddel voor de 3voor12 redactie",
-  "version": "1.0",
+  "version": "0.9",
   "content_scripts": [
       {
         "matches": ["http://edit.vpro.nl/3voor12/*"],
