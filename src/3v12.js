@@ -91,5 +91,5 @@ if (window.location.href.indexOf("mgnlPreview=true") == -1 && $("article").lengt
   checkLinkTargets();
   var totalWords = addWordCounts("#main div.text", function(description, count) { return description + ": " + count + " woorden"; });
   addWordCounts(".abstract", function(description, count) { return "Intro: " + count  + " woorden; artikel: " + totalWords + " woorden"; });
-  checkLinkHrefs();
+  // checkLinkHrefs();
 }

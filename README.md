@@ -10,12 +10,11 @@ Hulpmiddel voor de 3voor12 redactie, met de volgende features:
 
 - Markeert de datum als deze niet gelijk is aan vandaag
 - Markeert links die niet openen op een nieuw browsertabblad
-- Markeert links die verwijzen naar een niet-bestaande pagina (werkt niet vlekkeloos)
 - Toont het aantal woorden per paragraaf en per artikel
 
 #### Installeren in Chrome
 
-- Download [versie 0.9](releases/3voor12-chrome-0.9.crx?raw=true)
+- Download [versie 0.9.1](releases/3voor12-chrome-0.9.1.crx?raw=true)
 - Open [chrome://extensions]
 - Sleep 3voor12-chrome.crx in het scherm met extensies
 - Herlaad eventuele pagina's uit magnolia
