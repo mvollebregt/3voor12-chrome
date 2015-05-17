@@ -67,10 +67,15 @@ function countWords() {
   });
 }
 
+// zorg er (altijd) voor dat de pagina er op de printer goed uit ziet 
 applyAllCssToPrint();
 addCss('print.css', 'print');
-addCss('extras.css', 'screen, projection, print');
-checkDate();
-checkLinkTargets();
-checkLinkHrefs();
-countWords();
+
+// voer checks uit en tel woorden, maar alleen indien we niet in de preview zitten
+if (window.location.href.indexOf("mgnlPreview=true") == -1) {
+  addCss('extras.css', 'screen, projection, print');
+  checkDate();
+  checkLinkTargets();
+  checkLinkHrefs();
+  countWords();
+}
