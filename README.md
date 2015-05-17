@@ -15,6 +15,7 @@ Hulpmiddel voor de 3voor12 redactie, met de volgende features:
 
 #### Installeren in Chrome
 
+- Download [versie 0.9](blob/master/releases/3voor12-chrome-0.9.crx?raw=true)
 - Open [chrome://extensions]
 - Sleep 3voor12-chrome.crx in het scherm met extensies
 - Herlaad eventuele pagina's uit magnolia
