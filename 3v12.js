@@ -84,8 +84,8 @@ function addWordCounts(selector, formatter) {
 applyAllCssToPrint();
 addCss('print.css', 'print');
 
-// voer checks uit en tel woorden, maar alleen indien we niet in de preview zitten
-if (window.location.href.indexOf("mgnlPreview=true") == -1) {
+// voer checks uit en tel woorden, maar alleen indien we op een artikel en niet in de preview zitten
+if (window.location.href.indexOf("mgnlPreview=true") == -1 && $("article").length > 0) {
   addCss('extras.css', 'screen, projection, print');
   checkDate();
   checkLinkTargets();
