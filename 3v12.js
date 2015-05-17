@@ -44,7 +44,10 @@ function tryUrl(url, fail) {
 function checkLinkHrefs() {
   $("#main a[rel!='showbox']").each(function (index, elt) {
     var url = $(elt).attr('href');
-    tryUrl(url, function() {$(elt).addClass("error")});
+    // Op facebooklinks werkt de check niet goed. TODO: uitzoeken waarom niet en dan fixen
+    if (url.indexOf("facebook.com") == -1) {
+      tryUrl(url, function() {$(elt).addClass("error")});
+    }
   });
 }
 
