@@ -54,19 +54,30 @@ function word(word) {
   return word.replace(/\W/g, '');
 }
 
-function countWords() {
-  $(".abstract, div.text p").each(function(index, elt) {
-    var clone = $(elt).clone();
+function forEachParagraph(elt, fun) {
+  var children = $(elt).children();
+  if (children.length == 0) children = $(elt);
+  children.each(function(index, child) {
+    var clone = $(child).clone();
     clone.find("br").replaceWith("\n");
-    var summary = "";
-    $.each(clone.text().split("\n"), function(index, part) {
-      var words = part.split(/\s+/).filter(function(w){return w!=''});;
-      if (words.length > 4) {
-        summary += word(words[0]) + " " + word(words[1]) + "..." + word(words[words.length - 1 ]) + " (" + words.length + " woorden); "
+    $.each(clone.text().split("\n"), fun);
+  }); 
+}
+
+function addWordCounts(selector, formatter) {
+  var totalCount = 0;
+  $(selector).each(function(index, text) {
+    var wordCountText = "";
+    forEachParagraph(text, function(index, paragraph) {
+      var words = paragraph.split(/\s+/).filter(function(w){return w!=''});
+      if (words.length > 3) {
+        wordCountText += formatter(word(words[0]) + " " + word(words[1]) + "..." + word(words[words.length - 1]), words.length) + "; ";
       }
-    });
-    $(elt).append("<br/><span class='extra'>" + summary.substring(0, summary.length - 2) + "</span>");
+      totalCount += words.length;
+    });  
+    $(text).append("<p class='extra'>" + wordCountText.substring(0, wordCountText.length - 2) + "</p>");  
   });
+  return totalCount;
 }
 
 // zorg er (altijd) voor dat de pagina er op de printer goed uit ziet 
@@ -78,6 +89,7 @@ if (window.location.href.indexOf("mgnlPreview=true") == -1) {
   addCss('extras.css', 'screen, projection, print');
   checkDate();
   checkLinkTargets();
+  var totalWords = addWordCounts("#main div.text", function(description, count) { return description + ": " + count + " woorden"; });
+  addWordCounts(".abstract", function(description, count) { return "Intro: " + count  + " woorden; artikel: " + totalWords + " woorden"; });
   checkLinkHrefs();
-  countWords();
 }

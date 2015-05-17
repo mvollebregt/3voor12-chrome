@@ -7,3 +7,7 @@
   font-style: italic;
   font-size: 75%;
 }
+#main .intro article p:nth-last-of-type(2),
+.vtk-text-image p:nth-last-of-type(2) {
+  margin-bottom: 0;
+}
