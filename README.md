@@ -21,7 +21,7 @@ Hulpmiddel voor de 3voor12 redactie, met de volgende features:
 - Herlaad eventuele pagina's uit magnolia
 - Wanneer je een pagina opent (niet in preview-modus) kun je aan de getoonde aantallen woorden zien dat de plugin draait
 
-### Deïnstalleren
+#### Deïnstalleren
 
 Als de plugin niet doet wat je wilt kun je hem eenvoudig uitschakelen of deïnstalleren.
 
