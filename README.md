@@ -15,7 +15,16 @@ Hulpmiddel voor de 3voor12 redactie, met de volgende features:
 #### Installeren in Chrome
 
 - Download [versie 0.9.1](releases/3voor12-chrome-0.9.1.crx?raw=true)
-- Open [chrome://extensions]
+- Open [chrome://extensions](chrome://extensions). Als de plugin niet blijkt te doen wat je wilt, kun je op deze zelfde
+  pagina de plugin ook weer uitzetten of helemaal verwijderen.
 - Sleep 3voor12-chrome.crx in het scherm met extensies
 - Herlaad eventuele pagina's uit magnolia
 - Wanneer je een pagina opent (niet in preview-modus) kun je aan de getoonde aantallen woorden zien dat de plugin draait
+
+### Deïnstalleren
+
+Als de plugin niet doet wat je wilt kun je hem eenvoudig uitschakelen of deïnstalleren.
+
+- Ga daarvoor naar [chrome://extensions](chrome://extensions)
+- Om (tijdelijk) de plugin uit te schakelen, klik je het vinkje *Ingeschakeld* uit achter *3v12 redactie*.
+- Als je de plugin helemaal wilt verwijderen klik je (in plaats daarvan) op het prullenbakje achter *3v12redactie*.
